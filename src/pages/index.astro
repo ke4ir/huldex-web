@@ -1,50 +1,64 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/global.css';
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f2ff3a" />
+    <meta name="description" content="Huldex makes useful things available where people live, through shared inventories and smart neighborhood hubs." />
+    <title>Huldex™ — Access more. Own less.</title>
+  </head>
+  <body>
+    <header class="nav">
+      <a class="wordmark" href="#top" aria-label="Huldex home">HULDEX<span>™</span></a>
+      <a class="nav-link" href="mailto:hello@huldex.com">Get in touch <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">A shared layer for everyday things</p>
+        <h1>Access more.<br /><span>Own less.</span></h1>
+        <div class="hero-bottom">
+          <p class="intro">Huldex makes useful things available where people live—through shared inventories and smart neighborhood hubs.</p>
+          <a class="button" href="mailto:hello@huldex.com?subject=Huldex%20early%20access">Join early access <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="orb" aria-hidden="true"><div class="orb-core"></div></div>
+      </section>
+
+      <section class="statement" aria-labelledby="statement-title">
+        <p class="section-number">01 / THE IDEA</p>
+        <h2 id="statement-title">The things you need.<br />Not the things you need to own.</h2>
+        <div class="statement-copy">
+          <p>Most household objects sit unused. Huldex turns local surplus into reliable access: borrow a drill, pick up a projector, return a carpet cleaner—right around the corner.</p>
+        </div>
+      </section>
+
+      <section class="steps" aria-labelledby="steps-title">
+        <div class="steps-head">
+          <p class="section-number">02 / HOW IT WORKS</p>
+          <h2 id="steps-title">Simple by design.</h2>
+        </div>
+        <ol>
+          <li><span class="step-no">01</span><h3>Find</h3><p>See what’s available nearby.</p></li>
+          <li><span class="step-no">02</span><h3>Unlock</h3><p>Reserve and collect on your schedule.</p></li>
+          <li><span class="step-no">03</span><h3>Return</h3><p>Bring it back for the next person.</p></li>
+        </ol>
+      </section>
+
+      <section class="closing">
+        <p class="section-number">03 / COMING SOON</p>
+        <h2>A lighter way<br />to have enough.</h2>
+        <a class="button button-dark" href="mailto:hello@huldex.com?subject=Huldex%20partnership">Build a hub with us <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <a class="wordmark" href="#top">HULDEX<span>™</span></a>
+      <p>Berlin · 2026</p>
+      <p>Access is the new ownership.</p>
+    </footer>
+  </body>
 </html>
